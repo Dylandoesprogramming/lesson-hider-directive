@@ -1,0 +1,10 @@
+<li>
+    <span ng-if="!delete"> 
+    <input type="checkbox" ng-model="checked" ng-click="strike={textDecoration: 'line-through'}" />
+    <span ng-if="checked" ng-style="strike">{{lesson}}</span>
+    <span ng-if="!checked">{{lesson}}</span>
+    <button type="button" ng-click="dayAlert({lesson: lesson, day: lessonDay})">Get Day</button>
+    </span>
+    <button type="button" ng-click="delete = true; this.hide()">Delete Lesson</button>
+
+</li>
